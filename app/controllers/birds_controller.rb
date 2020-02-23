@@ -6,6 +6,8 @@ class BirdsController < ApplicationController
     # render json: birds, only: [:id, :name, :species]
     # another way to selectively choose data
     render json: birds, except: [:created_at, :updated_at]
+    # the rails magic
+    # render json: birds.to_json(except: [:created_at, :updated_at])
   end
   
   def show
