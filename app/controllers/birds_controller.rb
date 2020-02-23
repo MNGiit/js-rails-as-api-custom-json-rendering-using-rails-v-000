@@ -3,7 +3,9 @@ class BirdsController < ApplicationController
     @birds = Bird.all
     # render json: @birds
     # another way to selectively choose data
-    render json: birds, only: [:id, :name, :species]
+    # render json: birds, only: [:id, :name, :species]
+    # another way to selectively choose data
+    render json: birds, except: [:created_at, :updated_at]
   end
   
   def show
