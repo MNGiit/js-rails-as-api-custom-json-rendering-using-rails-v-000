@@ -13,6 +13,7 @@ class BirdsController < ApplicationController
   def show
     bird = Bird.find_by(id: params[:id])
     
+    # make 
     # render json: {id: bird.id, name: bird.name, species: bird.species}
     # render json can also be done like this
     # render json: bird.slice(:id, :name, :species)
